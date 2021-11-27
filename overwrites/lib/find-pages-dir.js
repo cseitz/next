@@ -3,10 +3,9 @@ Object.defineProperty(exports, "__esModule", {
     value: true
 });
 const {
-    renames: {
-        pages = 'pages'
-    }
+    renames = {}
 } = require(__dirname + '/../../config');
+const { pages = "pages" } = renames;
 exports.findPagesDir = findPagesDir;
 exports.existsSync = void 0;
 var _fs = _interopRequireDefault(require("fs"));
@@ -36,7 +35,7 @@ function findPagesDir(dir) {
     if (existsSync(_path.default.join(dir, '..', pages))) {
         throw new Error('> No `' + pages + '` directory found. Did you mean to run `next` in the parent (`../`) directory?');
     }
-    throw new Error("> Couldn't find a `' + pages + '` directory. Please create one under the project root");
+    throw new Error("> Couldn't find a `" + pages + "` directory. Please create one under the project root");
 }
 
 //# sourceMappingURL=find-pages-dir.js.map
