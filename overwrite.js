@@ -10,7 +10,7 @@ function overwrite(dir, dir_ = '') {
             const dest = resolve(__next, dir_.substr(1), file);
             // console.log(resolve(__next, dir_.substr(1), file));
             // Object.assign(require(dest), require(resolve(dir, file)));
-            console.log([resolve(dir, file), dest])
+            // console.log([resolve(dir, file), dest])
             fs.writeFileSync(dest, fs.readFileSync(resolve(dir, file)));
         } else {
             overwrite(resolve(dir, file), dir_ + '/' + file);

@@ -4,7 +4,7 @@ Object.defineProperty(exports, "__esModule", {
 });
 const {
     renames = {}
-} = require(__dirname + '/../../config');
+} = require(process.cwd() + '/node_modules/@cseitz/next/config');
 const { pages = "pages" } = renames;
 exports.findPagesDir = findPagesDir;
 exports.existsSync = void 0;
