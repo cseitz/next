@@ -4,4 +4,4 @@ const __next = resolve(process.cwd(), 'node_modules', 'next/dist');
 
 require('./overwrite');
 
-module.exports = require(resolve(__next, 'bin/next'));
+// module.exports = require(resolve(__next, 'bin/next'));
